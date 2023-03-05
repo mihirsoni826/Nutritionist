@@ -1,0 +1,40 @@
+<div class="card modal-body">
+    <div class="card-header text-center">
+        <h3>{{ modalContent.detectedFoodItem }}</h3>
+        <small class="text-muted">{{ modalContent.quantity }} {{ modalContent.measureLabel }} {{
+            modalContent.qualifiersLabel }}</small>
+    </div>
+    <img [src]="modalContent.imageUrl" class="card-img-top img-thumbnail">
+    <div class="card-body">
+        <div class="card-text">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">Calories</th>
+                        <td>{{ modalContent.calories }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Protein</th>
+                        <td>{{ modalContent.protein }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fat</th>
+                        <td>{{ modalContent.fat }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Carbohydrates</th>
+                        <td>{{ modalContent.carbs }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fibre</th>
+                        <td>{{ modalContent.fibre }}</td>
+                    </tr>
+                    <tr *ngIf="modalContent.measuredWeight != null">
+                        <th scope="row">weight</th>
+                        <td>{{ modalContent.measuredWeight }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

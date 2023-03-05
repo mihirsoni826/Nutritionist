@@ -1,0 +1,15 @@
+<div class="modal-body">
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+            <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+            Oops! {{ modalContent.errorMsg }}
+        </div>
+    </div>
+    <hr *ngIf="suggestions.length > 0">
+    <h5 *ngIf="suggestions.length > 0">Did you mean:</h5>  
+    <div class="chip mb-2 me-2" *ngFor="let item of suggestions" (click)="callParsedInfo($event)">
+        {{ item }}
+    </div>
+</div>

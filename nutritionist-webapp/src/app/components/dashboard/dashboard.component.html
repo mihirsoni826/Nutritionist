@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="container-fluid">
+
+    <form class="position-absolute top-50 start-50 translate-middle" #form="ngForm"
+      (submit)="getParsedInfo(form, false, '')">
+      <div class="input-group mb-3">
+
+        <input name="query" type="text" class="form-control" placeholder="1 kg tomato, 1 slice apple, banana...."
+          aria-label="Recipient's username" aria-describedby="button-addon2" ngModel #query="ngModel">
+        <button name="query" class="btn btn-primary" type="submit" [disabled]="loaderActive">
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loaderActive"></span>
+          Get Nutritional Info
+        </button>
+
+      </div>
+    </form>
+  </div>
+</div>
